@@ -1,0 +1,196 @@
+:root {
+    /* === CUSTOMISABLE VARIABLES === */
+    /* --- Colours --- */
+    /* Values are: hue, saturation %, lightness %, opacity (between 0 and 1; 0 = transparent, 1 = opaque) */
+    --primary-color: hsla(202, 100%, 35%, 0.95);
+    --primary-color-light: hsla(202, 100%, 35%, 0.8);
+    --primary-color-dark: hsla(202, 100%, 32%, 0.8);
+    --secondary-color: hsla(150, 100%, 35%, 0.95);
+    --secondary-color-light: hsla(150, 100%, 35%, 0.8);
+    --secondary-color-dark: hsla(150, 100%, 32%, 0.8);
+
+    --banner-image: url(images/aerial_beach2.jpg);
+    --slogan-font-size-smallscreen: 27px;
+    --logobar-height-smallscreen: 65px;
+
+    --font-size-smallscreen: 19px;
+
+    --footer-height-smallscreen: 15vw;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo {
+    margin: 0 8px;
+    max-width: 80vw;
+}
+
+#navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: var(--logobar-height-smallscreen);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#logobar {
+    width: 100%;
+    height: var(--logobar-height-smallscreen);
+    display: flex;
+    align-items: center;
+}
+
+#menubutton {
+    margin: 0 8px;
+    width: 20px;
+}
+
+#banner {
+    background-image: var(--banner-image);
+    width: 100%;
+    height: 90vw;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slogan {
+    display: block;
+    font-size: var(--slogan-font-size-smallscreen);
+    font-style: italic;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+main section {
+    font-size: var(--font-size-smallscreen);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 0;
+}
+
+main h2 {
+    font-size: 1.25em;
+    width: 100%;
+    text-align: center;
+    color: var(--secondary-color-dark);
+}
+
+/* main h2.dark {
+    color: var(--primary-color-dark);
+} */
+
+main h3 {
+    font-size: 1.05em;
+    margin: 5px 0;
+    font-weight: 400px;
+}
+
+main ul {
+    list-style: none;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+main li {
+    display: block;
+    font-size: var(--font-size-smallscreen);
+    color: black;
+    text-align: center;
+}
+
+main section button {
+    font-size: 0.8em;
+    padding: 3px 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: hsl(0, 0%, 95%);
+    margin: 5px 0;
+}
+
+main aside {
+    background-color: var(--primary-color-light);
+    font-size: var(--font-size-smallscreen);
+    text-align: center;
+    height: var(--logobar-height-smallscreen);
+    display: flex;
+    justify-content: center;
+}
+
+main aside h2 {
+    font-size: 1.25em;
+    color: white;
+    padding: 10px;
+}
+
+main aside button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    padding: 8px 8px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/* section.dark {
+    background-color: hsl(0, 0%, 78%);
+/* } */
+
+section p {
+    font-size: 1em;
+    color: black;
+    margin: 10px 20px;
+    max-width: 30em;
+    text-align: center;
+    line-height: 1.3;
+} 
+
+#headshot {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-width: 280px;
+    margin: 8px 0;
+}
+
+main a {
+    font-size: 1em;
+    color: var(--primary-color);
+}
+
+footer {
+    font-size: var(--font-size-smallscreen);
+    min-height: var(--footer-height-smallscreen);
+    /* background-color: hsla(202, 80%, 5%, 0.4); */
+    background-color: white;
+    box-shadow: 0 0 1px 0 black;
+}
+
+footer h2 {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+}
