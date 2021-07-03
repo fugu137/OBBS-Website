@@ -1,5 +1,6 @@
 :root {
     /* === CUSTOMISABLE VARIABLES === */
+    
     /* --- Colours --- */
     /* Values are: hue, saturation %, lightness %, opacity (between 0 and 1; 0 = transparent, 1 = opaque) */
     --primary-color: hsla(202, 100%, 35%, 0.95);
@@ -13,7 +14,7 @@
     --slogan-font-size-smallscreen: 27px;
     --logobar-height-smallscreen: 65px;
 
-    --font-size-smallscreen: 19px;
+    --font-size-smallscreen: 18px;
 
     --footer-height-smallscreen: 15vw;
 }
@@ -51,6 +52,34 @@ header {
     justify-content: flex-end;
 }
 
+#navbar ul {
+    display: none;
+}
+
+#navbar ul.open {
+    position: absolute;
+    display: block;
+    top: var(--logobar-height-smallscreen);
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    list-style: none;
+    line-height: 2.2;
+    font-size: var(--font-size-smallscreen);
+}
+
+#navbar ul.open li {
+    display: block;
+    font-size: 1em;
+    color: black;
+    padding: 0 40px;
+    text-align: center;
+}
+
+#navbar ul.open li:hover {
+    background-color: var(--primary-color-light);
+    color: white;
+}
+
 #logobar {
     width: 100%;
     height: var(--logobar-height-smallscreen);
@@ -59,8 +88,8 @@ header {
 }
 
 #menubutton {
-    margin: 0 8px;
-    width: 20px;
+    margin: 10px;
+    width: 23px;
 }
 
 #banner {
@@ -98,12 +127,8 @@ main h2 {
     color: var(--secondary-color-dark);
 }
 
-/* main h2.dark {
-    color: var(--primary-color-dark);
-} */
-
 main h3 {
-    font-size: 1.05em;
+    font-size: 1.025em;
     margin: 5px 0;
     font-weight: 400px;
 }
@@ -123,11 +148,13 @@ main li {
 
 main section button {
     font-size: 0.8em;
-    padding: 3px 5px;
+    padding: 3px 6px;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     background-color: hsl(0, 0%, 95%);
     margin: 5px 0;
+    font-family: 'Noto Serif', serif;
+    cursor: pointer;
 }
 
 main aside {
@@ -151,13 +178,11 @@ main aside button {
     color: white;
     font-size: 1.3em;
     padding: 8px 8px;
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Noto Serif', serif;
     font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
 }
-
-/* section.dark {
-    background-color: hsl(0, 0%, 78%);
-/* } */
 
 section p {
     font-size: 1em;
@@ -184,7 +209,6 @@ main a {
 footer {
     font-size: var(--font-size-smallscreen);
     min-height: var(--footer-height-smallscreen);
-    /* background-color: hsla(202, 80%, 5%, 0.4); */
     background-color: white;
     box-shadow: 0 0 1px 0 black;
 }
