@@ -10,7 +10,7 @@
     --secondary-color-light: hsla(150, 100%, 35%, 0.8);
     --secondary-color-dark: hsla(150, 100%, 32%, 0.8);
 
-    --banner-image: url(images/aerial_beach2.jpg);
+    --banner-image: url(images/aerial_beach_small.jpg);
     --slogan-font-size-smallscreen: 27px;
     --logobar-height-smallscreen: 65px;
 
@@ -117,7 +117,11 @@ main section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 18px 0;
+    padding: 20px 0;
+}
+
+main section.dark {
+    background-color: hsla(202, 100%, 35%, 0.8);
 }
 
 main h2 {
@@ -125,6 +129,10 @@ main h2 {
     width: 100%;
     text-align: center;
     color: var(--secondary-color-dark);
+}
+
+main section.dark h2 {
+    color: white;
 }
 
 main h3 {
@@ -144,6 +152,11 @@ main li {
     font-size: var(--font-size-smallscreen);
     color: black;
     text-align: center;
+}
+
+main section.dark li, 
+main section.dark p {
+    color: white;
 }
 
 main section button {
@@ -176,7 +189,7 @@ main aside button {
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.1em;
     padding: 8px 8px;
     font-family:'Noto Serif', serif;
     font-weight: bold;
@@ -187,17 +200,17 @@ main aside button {
 section p {
     font-size: 1em;
     color: black;
-    margin: 10px 20px;
+    margin: 15px 20px;
     max-width: 30em;
     text-align: center;
-    line-height: 1.3;
+    line-height: 1.5;
 } 
 
 #headshot {
     display: block;
     width: 100%;
     object-fit: cover;
-    max-width: 280px;
+    max-width: 250px;
     margin: 8px 0;
 }
 
@@ -211,10 +224,65 @@ footer {
     min-height: var(--footer-height-smallscreen);
     background-color: white;
     box-shadow: 0 0 1px 0 black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-smallscreen);
+    padding: 8px 0 20px 0;
 }
 
 footer h2 {
     font-size: 1em;
     text-align: center;
     width: 100%;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 0;
+}
+
+footer .social img {
+    display: inline-block;
+    width: 22px;
+    cursor: pointer;
+}
+
+footer .social img:hover{
+    opacity: 0.7;
+}
+
+footer p {
+    font-size: 0.65em;
+    text-align: center;
+}
+
+footer .contact {
+    font-size: 1em;
+}
+
+footer .contact ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 1em;
+}
+
+footer .contact li {
+    font-size: 0.75em;
+}
+
+footer .contact li a {
+    font-size: 1em;
+    color: black;
+}
+
+footer .contact li a:hover {
+    color: var(--primary-color);
+}
+
+footer .contact li:not(:last-child)::after {
+    content: " | ";
 }
