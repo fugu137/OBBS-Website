@@ -47,7 +47,9 @@ header {
 #navbar {
     position: absolute;
     top: 0;
+    right: 0;
     width: 100%;
+    max-width: 20vw;
     height: var(--logobar-height-smallscreen);
     display: flex;
     align-items: center;
@@ -124,7 +126,7 @@ header {
 }
 
 #banner.short {
-    height: calc(var(--logobar-height-smallscreen) * 1.5);
+    height: calc(var(--logobar-height-smallscreen) * 1.1);
 }
 
 #slogan {
@@ -192,6 +194,7 @@ main h3.blue {
 main em {
     font-size: 1em;
     text-align: center;
+    line-height: 1.5;
     opacity: 0.7;
     margin: 0 20px 20px 20px;
 }
@@ -302,7 +305,10 @@ main aside button {
     padding: 8px 8px;
     font-family:'Noto Serif', serif;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: underline;text-align: center;
+    height: var(--logobar-height-smallscreen);
+    display: flex;
+    justify-content: center;
     cursor: pointer;
     width: 80%;
 }
@@ -325,7 +331,7 @@ section p.centered {
     display: block;
     width: 100%;
     object-fit: cover;
-    max-width: 220px;
+    max-width: 240px;
     margin: 12px 0;
 }
 
@@ -378,6 +384,7 @@ footer h4 {
     font-size: var(--font-size-smallscreen);
     /* column-gap: 5px; */
     width: 100%;
+    margin: 10px 0;
     /* border-bottom: 1px solid rgba(211, 211, 211, 0.7); */
 }
 
@@ -402,7 +409,7 @@ footer .social img {
 }
 
 #xero {
-    padding: 18px 6px 0 6px;
+    padding: 18px 6px 18px 6px;
 }
 
 footer p {
@@ -442,4 +449,25 @@ footer .contact li a {
 footer .contact li a:hover,
 main aside button:hover {
     opacity: 0.8;
+}
+
+footer aside {
+    background-color: var(--secondary-color-dark);
+    font-size: var(--font-size-smallscreen);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer aside button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 0.8em;
+    padding: 2px 2px;
+    font-family:'Noto Serif', serif;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    width: 80%;
 }
