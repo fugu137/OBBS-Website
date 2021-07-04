@@ -74,10 +74,21 @@ header {
     color: black;
     padding: 0 40px;
     text-align: center;
+    cursor: pointer;
+    user-select: none;
 }
 
-#navbar ul.open li:hover {
+#navbar ul.open li.selected {
+    background-color: var(--primary-color-dark);
+    color: white;
+}
+
+#navbar ul.open li.selected:hover {
     background-color: var(--primary-color-light);
+}
+
+#navbar ul.open li:not(.selected):hover {
+    background-color: var(--secondary-color-dark);
     color: white;
 }
 
@@ -308,6 +319,8 @@ footer .social {
     justify-content: center;
     align-items: center;
     padding: 6px 0;
+    font-size: var(--font-size-smallscreen);
+    column-gap: 5px;
 }
 
 footer .social img {
@@ -339,6 +352,7 @@ footer .contact ul {
     height: var(--logobar-height-smallscreen);
     justify-content: space-evenly;
     padding: 8px 4px 0 4px;
+    flex-wrap: wrap;
 }
 
 footer .contact li {
