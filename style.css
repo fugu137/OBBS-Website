@@ -282,7 +282,7 @@ section p {
     display: block;
     width: 100%;
     object-fit: cover;
-    max-width: 250px;
+    max-width: 220px;
     margin: 12px 0;
 }
 
@@ -319,14 +319,14 @@ footer h4 {
     text-align: center;
     width: 100%;
     font-weight: normal;
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 footer .credentials {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 0 10px 0;
+    padding: 10px 0 15px 0;
     font-size: var(--font-size-smallscreen);
     column-gap: 5px;
     width: 100%;
@@ -335,13 +335,13 @@ footer .credentials {
 
 footer .credentials img {
     display: inline-block;
-    height: 85px;
+    height: 100px;
     cursor: pointer;
     object-fit: contain;
 }
 
 footer .social {
-    padding: 8px 0;
+    padding: 6px 0;
 }
 
 footer .social img:hover{
@@ -350,10 +350,11 @@ footer .social img:hover{
 
 footer .social img {
     width: 22px;
+    cursor: pointer;
 }
 
 #xero {
-    padding: 18px 5px;
+    padding: 18px 0;
 }
 
 footer p {
@@ -375,7 +376,7 @@ footer .contact ul {
     font-size: 1em;
     width: 100%;
     justify-content: space-evenly;
-    padding: 8px 4px 0 4px;
+    padding: 6px 4px 0 4px;
     flex-wrap: wrap;
 }
 
