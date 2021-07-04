@@ -9,6 +9,7 @@
     --secondary-color: hsla(150, 100%, 35%, 0.95);
     --secondary-color-light: hsla(150, 100%, 35%, 0.8);
     --secondary-color-dark: hsla(150, 100%, 32%, 0.8);
+    --tertiary-color: hsl(43, 90%, 50%);
 
     --banner-image: url(images/aerial_beach_small.jpg);
     --slogan-font-size-smallscreen: 27px;
@@ -90,6 +91,12 @@ header {
 #menubutton {
     margin: 10px;
     width: 23px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#menubutton:hover {
+    opacity: 0.7;
 }
 
 #banner {
@@ -119,10 +126,10 @@ main section {
     align-items: center;
     padding: 20px 0;
 }
-
+/* 
 main section.dark {
     background-color: var(--primary-color-light);
-}
+} */
 
 main h2 {
     font-size: 1.25em;
@@ -167,7 +174,7 @@ main section.dark ul {
 main section.dark li {
     color: var(--secondary-color-dark);
 }
-
+/* 
 .testimonial {
     background-color: white;
     margin-top: 5px;
@@ -204,10 +211,10 @@ main section.dark li {
     padding: 20px;
     font-style: italic;
     list-style: 1.5;
-}
+} */
 
 main section button {
-    font-size: 0.8em;
+    font-size: 0.85em;
     padding: 3px 6px;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
@@ -225,7 +232,7 @@ main section.dark button {
 }
 
 main aside {
-    background-color: var(--primary-color-light);
+    background-color: var(--primary-color-dark);
     font-size: var(--font-size-smallscreen);
     text-align: center;
     height: var(--logobar-height-smallscreen);
@@ -265,12 +272,16 @@ section p {
     width: 100%;
     object-fit: cover;
     max-width: 250px;
-    margin: 8px 0;
+    margin: 12px 0;
 }
 
 main a {
     font-size: 1em;
     color: var(--primary-color);
+}
+
+main a:hover {
+    color: var(--secondary-color);
 }
 
 footer {
@@ -283,6 +294,7 @@ footer {
     justify-content: center;
     font-size: var(--font-size-smallscreen);
     padding: 0 0 20px 0;
+    margin-top: 20px;
 }
 
 footer h2 {
@@ -316,7 +328,7 @@ footer p {
 footer .contact {
     font-size: 1em;
     width: 100%;
-    background-color: var(--primary-color-light);
+    background-color: var(--primary-color-dark);
 }
 
 footer .contact ul {
@@ -340,6 +352,7 @@ footer .contact li a {
     color: white;
 }
 
-footer .contact li a:hover {
-    color: rgb(52, 219, 52);
+footer .contact li a:hover,
+main aside button:hover {
+    opacity: 0.8;
 }
