@@ -12,7 +12,7 @@
     --tertiary-color: hsl(43, 90%, 50%);
 
     --banner-image: url(images/aerial_beach_small.jpg);
-    --slogan-font-size-smallscreen: 26px;
+    --slogan-font-size-smallscreen: 25px;
     --logobar-height-smallscreen: 70px;
 
     --font-size-smallscreen: 18px;
@@ -25,6 +25,7 @@
     font-size: 0;
     margin: 0;
     padding: 0;
+    font-family: Helvetica, sans-serif;
 }
 
 body {
@@ -37,12 +38,13 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.5);
+    
 }
 
 #logo {
     margin: 0 8px;
     max-width: 80vw;
+    color: hsla(202, 100%, 20%, 0.6)
 }
 
 #navbar {
@@ -101,6 +103,7 @@ header {
     height: var(--logobar-height-smallscreen);
     display: flex;
     align-items: center;
+    box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.5);
 }
 
 #menubutton {
@@ -128,6 +131,7 @@ header {
 
 #banner.short {
     height: calc(var(--logobar-height-smallscreen) * 1.2);
+    display: none;
 }
 
 #slogan {
@@ -136,6 +140,7 @@ header {
     font-style: italic;
     color: white;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Noto Serif', serif;
 }
 
 #title {
@@ -165,18 +170,19 @@ main section.dark {
 } */
 
 main h1 {
-    font-size: 1.25em;
+    font-size: 1.2em;
     text-align: center;
     color: black;
     width: 100%;
 }
 
 main h2 {
-    font-size: 1.25em;
+    font-size: 1.2em;
     width: 100%;
     text-align: center;
     color: var(--secondary-color-dark);
     margin-bottom: 10px;
+    /* font-family: 'Noto Serif', serif; */
 }
 
 main section.dark h2 {
@@ -273,8 +279,16 @@ main section button {
     color: var(--primary-color);
     background-color: hsl(0, 0%, 95%);
     margin: 5px 0;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Noto Sans', sans-serif;
     cursor: pointer;
+}
+
+main section button:hover {
+    opacity: 0.75;
+}
+
+main section button:active {
+    opacity: 1;
 }
 
 main section.dark button {
@@ -294,7 +308,7 @@ main aside {
 }
 
 main aside h2 {
-    font-size: 1.25em;
+    font-size: 1.2em;
     color: white;
     padding: 10px;
 }
@@ -305,7 +319,7 @@ main aside button {
     color: white;
     font-size: 1em;
     /* padding: 8px 8px; */
-    font-family:'Noto Serif', serif;
+    font-family:'Noto Sans', sans-serif;
     font-weight: bold;
     text-decoration: underline;
     height: var(--logobar-height-smallscreen);
@@ -314,15 +328,17 @@ main aside button {
     align-items: center;
     cursor: pointer;
     width: 80%;
+    line-height: 1.4;
 }
 
 section p {
     font-size: 1em;
     color: black;
-    margin: 0 20px 12px 20px;
+    margin: 2px 20px 12px 20px;
     max-width: 30em;
     text-align: left;
     line-height: 1.5;
+    /* font-family: 'Noto Serif', serif; */
 } 
 
 section p.centered { 
@@ -334,12 +350,12 @@ section p.centered {
     display: block;
     width: 100%;
     object-fit: cover;
-    max-width: 240px;
+    max-width: 200px;
     margin: 12px 0;
 }
 
 #headshot.large {
-    max-width: 280px;
+    max-width: 240px;
 }
 
 main a {
@@ -348,7 +364,12 @@ main a {
 }
 
 main a:hover {
-    color: var(--secondary-color);
+    /* color: var(--secondary-color); */
+    opacity: 0.7;
+}
+
+main a:active {
+    opacity: 1;
 }
 
 footer {
@@ -455,6 +476,11 @@ main aside button:hover {
     opacity: 0.8;
 }
 
+footer .contact li a:active,
+main aside button:active {
+    opacity: 1;
+}
+
 footer aside {
     background-color: var(--secondary-color-dark);
     font-size: var(--font-size-smallscreen);
@@ -470,7 +496,7 @@ footer aside button {
     color: white;
     font-size: 0.8em;
     padding: 2px 2px;
-    font-family:'Noto Serif', serif;
+    font-family:'Noto Sans', sans-serif;
     /* text-decoration: underline; */
     cursor: pointer;
     width: 80%;
