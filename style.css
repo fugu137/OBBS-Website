@@ -12,7 +12,7 @@
     --tertiary-color: hsl(43, 90%, 50%);
 
     --banner-image: url(images/aerial_beach_small.jpg);
-    --slogan-font-size-smallscreen: 27px;
+    --slogan-font-size-smallscreen: 26px;
     --logobar-height-smallscreen: 70px;
 
     --font-size-smallscreen: 18px;
@@ -37,6 +37,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.5);
 }
 
 #logo {
@@ -104,7 +105,7 @@ header {
 
 #menubutton {
     margin: 10px;
-    width: 23px;
+    width: 21px;
     opacity: 0.9;
     cursor: pointer;
 }
@@ -126,7 +127,7 @@ header {
 }
 
 #banner.short {
-    height: calc(var(--logobar-height-smallscreen) * 1.1);
+    height: calc(var(--logobar-height-smallscreen) * 1.2);
 }
 
 #slogan {
@@ -175,6 +176,7 @@ main h2 {
     width: 100%;
     text-align: center;
     color: var(--secondary-color-dark);
+    margin-bottom: 10px;
 }
 
 main section.dark h2 {
@@ -202,7 +204,7 @@ main em {
 main ul {
     list-style: none;
     line-height: 1.75;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 main li {
@@ -302,13 +304,14 @@ main aside button {
     border: none;
     color: white;
     font-size: 1em;
-    padding: 8px 8px;
+    /* padding: 8px 8px; */
     font-family:'Noto Serif', serif;
     font-weight: bold;
-    text-decoration: underline;text-align: center;
+    text-decoration: underline;
     height: var(--logobar-height-smallscreen);
     display: flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
     width: 80%;
 }
@@ -422,7 +425,7 @@ footer .contact {
     font-size: 1em;
     width: 100%;
     background-color: var(--primary-color-dark);
-    height: var(--logobar-height-smallscreen);
+    height: calc(var(--logobar-height-smallscreen) * 1.38);
 }
 
 footer .contact ul {
@@ -433,6 +436,7 @@ footer .contact ul {
     justify-content: space-evenly;
     padding: 6px 4px 0 4px;
     flex-wrap: wrap;
+    column-gap: 10px;
 }
 
 footer .contact li {
