@@ -3,13 +3,14 @@
     
     /* --- Colours --- */
     /* Values are: hue, saturation %, lightness %, opacity (between 0 and 1; 0 = transparent, 1 = opaque) */
+    --primary-color-light: hsl(202, 70%, 45%);
     --primary-color: hsl(202, 70%, 40%);
     --primary-color-dark: hsl(202, 100%, 35%);
-    --secondary-color-light: hsl(150, 60%, 45%);
+    --secondary-color-light: hsl(150, 60%, 48%);
     --secondary-color: hsl(150, 100%, 35%);
-    --tertiary-color-light: hsl(43, 85%, 55%);
-    --tertiary-color: hsl(43, 90%, 50%);
-    --tertiary-color-dark: hsl(43, 90%, 48%);
+    --tertiary-color-light: hsl(41, 85%, 55%);
+    --tertiary-color: hsl(41, 90%, 50%);
+    --tertiary-color-dark: hsl(41, 90%, 48%);
     --charcoal-color: hsl(0, 0%, 25%);
 
     --banner-image: url(images/aerial_beach_small.jpg);
@@ -142,7 +143,7 @@ header {
     background-image: var(--banner-image);
     width: 100%;
     height: 90vw;
-    background-position: center;
+    background-position: -130px -20px;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -194,7 +195,7 @@ header {
 }
 
 .banner-content li {
-    font-size: 1.35em;
+    font-size: 1.4em;
     color: white;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     font-weight: bold;
@@ -222,13 +223,13 @@ header {
 }
 
 #CTA {
-    font-size: 0.95em;
+    font-size: 0.9em;
     color: white;
     background-color: var(--tertiary-color);
     border: 1px solid var(--tertiary-color-dark);
     padding: 0 8px; 
     padding-bottom: 1px; 
-    height: 36px;
+    height: 35px;
     line-height: 5px;
     font-family: 'Noto Sans', sans-serif;
     cursor: pointer;
@@ -280,7 +281,7 @@ main h3 {
     display: inline-block;
     font-size: 1em;
     margin-bottom: 5px;
-    color: var(--primary-color);
+    color: var(--primary-color-light);
 }
 
 main em {
