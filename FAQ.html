@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Book Business Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="icons/favicon.jpg" />
+</head>
+
+<body>
+    <header>
+        <div id="logobar">
+            <a href="index.html"><img id="logo" src="images/logo.png" alt="logo" /></a>
+        </div>
+        <aside id="ad"><a href="contact.html">Enquire now</a>&nbsp;for a free consultation</aside>
+    </header>
+    <nav id="navbar">
+        <img id="menubutton" src="icons/menu_black.svg" alt="menu-button" onclick="menu.classList.toggle('open')" />
+        <ul id="menu">
+            <li>Welcome</li>
+            <li>Services</li>
+            <li>Clients</li>
+            <li>Contact</li>
+            <li>FAQ</li>
+            <li>Links</li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1 class="blue">Frequently Asked Questions</h1>
+            <ol>
+                <li>
+                    <h3>1. What is the difference between bookkeeping & accounting?</h3>
+                    <p>
+                        Bookkeeping is about the day-in-day-out financial record keeping and reporting and
+                        accounting
+                        is
+                        using
+                        the financial information to make important financial decisions about a business entity.
+                    </p>
+                </li>
+                <li>
+                    <h3>2. Why should I outsource my bookkeeping?</h3>
+                    <p>
+                        Outsourcing your bookkeeping allows you to focus on your business. It frees up your time to
+                        allow you to focus on revenue generating activities. Outsourced bookkeeping services can
+                        result in improved efficiencies, cost savings, access to financial expertise not available
+                        in-house, and an improvement in being able to monitor your business finances.
+                    </p>
+                </li>
+                <li>
+                    <h3>3. How often should I use a bookkeeper?</h3>
+                    <p>
+                        This will depend on your or your businesses needs. If you are a sole trader, you may only
+                        require the services of a bookkeeper on a quarterly or monthly basis. Bookkeepers can
+                        prepare financial reports and statement on a daily, weekly, monthly or periodic basis.
+                    </p>
+                </li>
+                <li>
+                    <h3>4. How can Open Book Business Solutions benefits my business?</h3>
+                    <p>
+                        We will look after both your bookkeeping & accounting needs. In the same time, we will take
+                        care of the reporting deadlines required by the ATO such as: BAS, IAS and Income Tax
+                        Returns. Therefore, you will have more time to focus on your business and clients.
+                    </p>
+                </li>
+                <li>
+                    <h3>5. How much does it cost to do my bookkeeping?</h3>
+                    <p>
+                        Our bookkeeping rate is <strong>$50 plus GST</strong> per hour. The total costs depends on how
+                        much work need
+                        to be done. We can provide a free initial assessment on your bookkeeping needs with NO
+                        obligations.
+                    </p>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <ul>
+                <li><a href="tel: +61 434 091 491">phone: +61 434 091 491</a></li>
+                <li><a href="mailto: info@obbs.com.au">email: info@obbs.com.au</a></li>
+                <!-- <li><a href="www.obbs.com.au">www.obbs.com.au</a></li> -->
+            </ul>
+        </div>
+
+        <h4>Follow us:</h4>
+        <div class="social">
+            <img src="icons/f_Logo.png" title="Follow us on Facebook" />
+        </div>
+        <p>&copy; 2010 Open Book Business Solutions</p>
+    </footer>
+
+    <script type="text/javascript">
+        const menu = document.getElementById("menu");
+        window.onscroll = () => menu.classList.remove("open");
+    </script>
+</body>
+
+</html>
