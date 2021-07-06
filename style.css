@@ -4,7 +4,7 @@
     /* --- Colours --- */
     /* Values are: hue, saturation %, lightness %, opacity (between 0 and 1; 0 = transparent, 1 = opaque) */
     --primary-color: hsl(202, 70%, 40%);
-    --primary-color-dark: hsl(202, 90%, 35%);
+    --primary-color-dark: hsl(202, 100%, 35%);
     --secondary-color-light: hsl(150, 60%, 45%);
     --secondary-color: hsl(150, 100%, 35%);
     --tertiary-color-light: hsl(43, 85%, 55%);
@@ -13,8 +13,9 @@
     --charcoal-color: hsl(0, 0%, 25%);
 
     --banner-image: url(images/aerial_beach_small.jpg);
-    --slogan-font-size-smallscreen: 26px;
+    --slogan-font-size-smallscreen: 25px;
     --logobar-height-smallscreen: 70px;
+    --ad-height: 42px;
 
     --font-size-smallscreen: 18px;
 }
@@ -68,11 +69,19 @@ header {
     right: 0;
     background-color: rgba(255, 255, 255, 0.8);
     list-style: none;
-    line-height: 2.2;
-    font-size: var(--font-size-smallscreen);
+    line-height: var(--ad-height);
 }
 
-#navbar ul.open li {
+#navbar.opaque ul.open {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: -1px 1px 1px 1px hsla(0, 0%, 40%, 0.1);
+}
+/* 
+#navbar.opaque ul.open li a {
+    color: white;
+} */
+
+#navbar ul.open li a {
     display: block;
     font-size: 1em;
     color: black;
@@ -80,19 +89,33 @@ header {
     text-align: center;
     cursor: pointer;
     user-select: none;
+    text-decoration: none;
+    height: var(--ad-height);
 }
 
-#navbar ul.open li.selected {
+#navbar ul.open li.selected a {
     background-color: var(--primary-color-dark);
+    opacity: 0.8;
     color: white;
 }
 
-#navbar ul.open li.selected:hover {
-    background-color: var(--primary-color-light);
+#navbar ul.open li.selected a:hover {
+    background-color: var(--primary-color);
+    opacity: 0.8;
 }
 
-#navbar ul.open li:not(.selected):hover {
-    background-color: var(--secondary-color-dark);
+#navbar ul.open li:not(.selected) a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#navbar ul.open li.selected a:active {
+    background-color: var(--primary-color-dark);
+    opacity: 0.8;
+}
+
+#navbar ul.open li:not(.selected) a:active {
+    background-color: var(--secondary-color-light);
     color: white;
 }
 
@@ -136,14 +159,23 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 42px;
+    height: var(--ad-height);
     font-size: 0.88em;
+    text-shadow: 0 0 1px var(--tertiary-color-dark);
 }
 
 #ad a {
     font-size: 1em;
     color: white;
 } 
+
+#ad a:hover {
+    opacity: 0.8;
+}
+
+#ad a:active {
+    opacity: 1;
+}
 
 #slogan {
     display: block;
@@ -162,36 +194,54 @@ header {
 }
 
 .banner-content li {
-    font-size: 1.3em;
+    font-size: 1.35em;
     color: white;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     font-weight: bold;
 }
 
-#banner #CTA {
-    margin-right: 160px;
+.button-bar {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: left;
+    column-gap: 20px;
+}
+
+.button-bar a {
+    color: white;
+    font-size: 0.9em;
+}
+
+.button-bar a:hover {
+    opacity: 0.8;
+}
+
+.button-bar a:active {
+    opacity: 1;
 }
 
 #CTA {
     font-size: 0.95em;
     color: white;
     background-color: var(--tertiary-color);
-    border: 1px solid var(--tertiary-color);
-    padding: 2px 11px;
-    padding-bottom: 3px;
-    line-height: 1.65;
+    border: 1px solid var(--tertiary-color-dark);
+    padding: 0 8px; 
+    padding-bottom: 1px; 
+    height: 36px;
+    line-height: 5px;
     font-family: 'Noto Sans', sans-serif;
     cursor: pointer;
+    text-shadow: 0 0 1px var(--tertiary-color-dark);
+    /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2); */
 }
 
 #CTA:hover {
     background-color: var(--tertiary-color-dark);
-    border-color: var(--tertiary-color-dark);
 }
 
-#CTA button:active {
+#CTA:active {
     background-color: var(--tertiary-color);
-    border-color: var(--tertiary-color);
 }
 
 main {
@@ -387,7 +437,7 @@ footer p {
 footer .contact {
     font-size: 1em;
     width: 100%;
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color);
     height: calc(var(--logobar-height-smallscreen) * 1.5);
     padding: 0 5px;
 }
