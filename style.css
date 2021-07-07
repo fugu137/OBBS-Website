@@ -357,6 +357,7 @@ main ol li {
 .bullet-list {
     list-style-type: square;
     list-style-position: outside;
+    width: 100%;
 }
 
 .bullet-list li h3 {
@@ -373,6 +374,32 @@ main ol li {
     line-height: 1.5;
     /* font-size: 0.9rem; */
     /* margin-left: 5%; */
+}
+
+.testimonials {
+    padding-top: 0px;
+}
+
+.testimonials ul {
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.testimonials li {
+    width: 100%;
+    max-width: 350px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials img {
+    max-width: 350px;
+    width: 100%;
+    padding: 15px 20px;
+    object-fit: scale-down;
 }
 
 .orange {
