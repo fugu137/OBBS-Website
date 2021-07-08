@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Book Business Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="icons/favicon.jpg" />
+</head>
+
+<body>
+    <header>
+        <div id="logobar">
+            <a href="index.html"><img id="logo" src="images/logo.png" alt="logo" /></a>
+        </div>
+        <aside id="ad2">Contact now for a free initial consultation:<a
+                href="mailto: info@obbs.com.au">info@obbs.com.au</a>&nbsp;OR&nbsp;<a class="green"
+                href="tel: +61 434 091 491"><strong>0434 091 491</strong></a></aside>
+    </header>
+    <nav id="navbar">
+        <img id="menubutton" src="icons/menu_black.svg" alt="menu-button" onclick="menu.classList.toggle('open')" />
+        <ul id="menu">
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li class="selected"><a href="contact.html">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Contact Form</h1>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <ul>
+                <li><a href="tel: +61 434 091 491">phone: +61 434 091 491</a></li>
+                <li><a href="mailto: info@obbs.com.au">email: info@obbs.com.au</a></li>
+                <!-- <li><a href="www.obbs.com.au">www.obbs.com.au</a></li> -->
+            </ul>
+        </div>
+
+        <h4>Follow us:</h4>
+        <div class="social">
+            <img src="icons/f_Logo.png" title="Follow us on Facebook" />
+        </div>
+        <p>&copy; 2010 Open Book Business Solutions</p>
+    </footer>
+
+    <script type="text/javascript">
+        const menu = document.getElementById("menu");
+        window.onscroll = () => menu.classList.remove("open");
+    </script>
+</body>
+
+</html>

@@ -180,6 +180,24 @@ header {
     opacity: 1;
 }
 
+#ad2 {
+    font-size: 0.9rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 1.5;
+    padding: 10px 0;
+    /* border-top: 1px solid var(--tertiary-color);
+    border-bottom: 1px solid var(--tertiary-color); */
+    background-color: hsla(0, 0%, 85%, 0.5);
+}
+
+#ad2 a {
+    font-size: 1em;
+}
+
 #slogan {
     display: block;
     font-size: var(--slogan-font-size-smallscreen);
