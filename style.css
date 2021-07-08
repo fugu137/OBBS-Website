@@ -8,7 +8,7 @@
     --primary-color-dark: hsl(202, 100%, 35%);
     --secondary-color-light: hsl(150, 60%, 47%);
     --secondary-color: hsl(150, 100%, 35%);
-    --tertiary-color-light: hsl(40, 85%, 55%);
+    --tertiary-color-light: hsl(40, 85%, 57%);
     --tertiary-color: hsl(40, 90%, 50%);
     --tertiary-color-dark: hsl(40, 95%, 47%);
     --charcoal-color: hsl(0, 0%, 25%);
@@ -188,10 +188,10 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     line-height: 1.5;
-    padding: 10px 0;
+    padding: 12px 0;
     /* border-top: 1px solid var(--tertiary-color);
     border-bottom: 1px solid var(--tertiary-color); */
-    background-color: hsla(0, 0%, 85%, 0.5);
+    background-color: hsla(0, 0%, 85%, 0.4);
 }
 
 #ad2 a {
@@ -259,7 +259,7 @@ header {
 }
 
 #CTA:hover {
-    background-color: var(--tertiary-color-dark);
+    background-color: var(--tertiary-color-light);
 }
 
 #CTA:active {
@@ -325,6 +325,47 @@ section .links {
 section .links p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+section form {
+    max-width: 450px;
+    width: 100%;
+}
+
+section form label {
+    font-size: 0.9rem;
+}
+
+section form input,
+section form textarea {
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 2px 1px 0 1px;
+    resize: vertical;
+}
+
+section form textarea {
+    height: 120px;
+}
+
+section form input[type=submit] {
+    margin-top: 5px;
+    border-radius: 0;
+    background-color: var(--tertiary-color);
+    color: white;
+    border: 1px solid var(--tertiary-color);
+    padding: 7px 0 3px 0;
+    cursor: pointer;
+    text-shadow: 0 0 4px var(--tertiary-color-dark);
+}
+
+section form input[type=submit]:hover {
+    opacity: 0.9;
+}
+
+section form input[type=submit]:active {
+    opacity: 1;
 }
 
 main h1 {
@@ -431,13 +472,13 @@ main ol li {
 }
 
 .bullet-list li {
-    padding-left: 5px;
+    padding-left: 2px;
     margin-left: 5%;
 }
 
 .bullet-list li p {
     line-height: 1.5;
-    /* font-size: 0.9rem; */
+    font-size: 0.9rem;
     /* margin-left: 5%; */
 }
 
