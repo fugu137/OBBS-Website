@@ -33,7 +33,7 @@
     <main>
         <section>
             <h1>Contact Form</h1>
-            <form id="form" target="iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPz-mMhVY5Vj_2WIYmWww33Wa8pK4jbg7o4cJP3G94Q0X3Hw/formResponse">
+            <form id="form" target="iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPz-mMhVY5Vj_2WIYmWww33Wa8pK4jbg7o4cJP3G94Q0X3Hw/formResponse" method="post">
                 <label for="name">Name:</label><br>
                 <input id="name" name="entry.2037627819" type="text" required ><br>
 
@@ -47,7 +47,7 @@
                 <textarea id="message" name="entry.1676172741" required></textarea><br>
 
                 <input type="submit" value="Submit">
-            </form>
+            </form> 
 
             <iframe id="iframe" name="iframe" hidden></iframe>
 
@@ -85,6 +85,7 @@
                     iframeFirstLoad = false;
                 } else {
                     window.alert("Thank you! Your message has been sent. We'll get back to you shortly.");
+                    form.reset();
                 }
             };
         }
@@ -94,7 +95,7 @@
 
         // function handleFormSubmit(e) {
         //     const url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPz-mMhVY5Vj_2WIYmWww33Wa8pK4jbg7o4cJP3G94Q0X3Hw/formResponse";
-            
+
         //     const request = new XMLHttpRequest();
         //     request.open("POST", url, true);
 

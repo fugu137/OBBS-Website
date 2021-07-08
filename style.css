@@ -218,7 +218,7 @@ header {
 .banner-content li {
     font-size: 1.4em;
     color: white;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
     font-weight: bold;
 }
 
@@ -347,6 +347,10 @@ section form textarea {
 
 section form textarea {
     height: 120px;
+}
+
+section iframe {
+    width: 100%;
 }
 
 section form input[type=submit] {
