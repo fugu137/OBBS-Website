@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Book Business Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="icons/favicon.jpg" />
+</head>
+
+<body>
+    <header>
+        <div id="logobar">
+            <a href="index.html"><img id="logo" src="images/logo.png" alt="logo" /></a>
+        </div>
+        <aside id="ad"><a href="contact.html">Enquire now</a>&nbsp;for a free consultation</aside>
+    </header>
+    <nav id="navbar">
+        <img id="menubutton" src="icons/menu_black.svg" alt="menu-button" onclick="menu.classList.toggle('open')" />
+        <ul id="menu">
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="links.html">Links</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <img class="logo" src="images/Limelite_Logo_blue.png" />
+            <p>Melanie Scott of Limelite Dance:</p>
+            <blockquote>
+                <p>"Dear Fikry,</p>
+                <p>
+                    I cannot thank you enough for all of your help in getting my accounts in order. It was no easy task
+                    but the fact that you are so highly organised and MYOB efficient, you made the task seem like a
+                    breeze!
+                </p>
+                <p>
+                    As Principal of a Dance School and Mother of 2 children under the age of two, there is not much
+                    extra
+                    time left over at the end of the day. Your efforts in getting to know my business, the help,
+                    understanding and support you have given, has enabled me to get ahead of my game instead of playing
+                    catch up.
+                </p>
+                <p>
+                    You have been patient, easy to talk to and able to translate accountant jargon for me. I respect
+                    both
+                    your business advice and friendship and look forward to working with you over many more years to
+                    come."
+                </p>
+
+                <cite>
+                    <p><strong>Melanie Scott</strong></p>
+                    <p><em>Director</em></p>
+                </cite>
+            </blockquote>
+
+            <aside class="links">
+                <p>e-mail: <a href="mailto: info@lime-lite.com.au">info@lime-lite.com.au</a>
+                <p>website: <a href="https://www.lime-lite.com.au" target="_blank" rel="noopener noreferrer">www.lime-lite.com.au</a>
+            </aside>
+            <aside>Click to see <a href="clients.html">other clients</a></aside>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <ul>
+                <li><a href="tel: +61 434 091 491">phone: +61 434 091 491</a></li>
+                <li><a href="mailto: info@obbs.com.au">email: info@obbs.com.au</a></li>
+                <!-- <li><a href="www.obbs.com.au">www.obbs.com.au</a></li> -->
+            </ul>
+        </div>
+
+        <h4>Follow us:</h4>
+        <div class="social">
+            <img src="icons/f_Logo.png" title="Follow us on Facebook" />
+        </div>
+        <p>&copy; 2010 Open Book Business Solutions</p>
+    </footer>
+
+    <script type="text/javascript">
+        const menu = document.getElementById("menu");
+        window.onscroll = () => menu.classList.remove("open");
+    </script>
+</body>
+
+</html>
