@@ -30,6 +30,14 @@
         </ul>
     </nav>
 
+    <section id="modal">
+        <article id="confirmation" class="animate">
+            <h3>Thank you!</h3>
+            <p>Your message has been sent. We'll get back to you by email shortly.</p>
+            <button onclick="document.getElementById('modal').style.display = 'none'">Okay</button>
+        </article>
+    </section>
+
     <main>
         <section>
             <h1>Contact Form</h1>
@@ -84,7 +92,8 @@
                 if (iframeFirstLoad) {
                     iframeFirstLoad = false;
                 } else {
-                    window.alert("Thank you! Your message has been sent. We'll get back to you shortly.");
+                    const modal = document.getElementById("modal");
+                    modal.style.display = "flex";
                     form.reset();
                 }
             };

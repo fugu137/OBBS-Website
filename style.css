@@ -73,17 +73,9 @@ header {
     list-style: none;
     line-height: var(--ad-height);
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: -1px 1px 1px 1px hsla(0, 0%, 40%, 0.1);
+    box-shadow: -1px 1px 1px 1px hsla(0, 0%, 60%, 0.1);
 }
 
-#navbar.opaque ul.open {
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: -1px 1px 1px 1px hsla(0, 0%, 40%, 0.1);
-}
-/* 
-#navbar.opaque ul.open li a {
-    color: white;
-} */
 
 #navbar ul.open li a {
     display: block;
@@ -251,7 +243,7 @@ header {
     background-color: var(--tertiary-color);
     border: 1px solid var(--tertiary-color-dark);
     padding: 0 8px; 
-    height: 32px;
+    height: 33px;
     line-height: 5px;
     padding-bottom: 1px;
     font-family: 'Noto Sans', sans-serif;
@@ -361,7 +353,7 @@ section form input[type=submit] {
     background-color: var(--tertiary-color);
     color: white;
     border: 1px solid var(--tertiary-color);
-    padding: 7px 0 3px 0;
+    padding: 7px 0 4px 0;
     cursor: pointer;
     text-shadow: 0 0 4px var(--tertiary-color-dark);
 }
@@ -408,6 +400,46 @@ section p {
 
 section p.centered { 
     text-align: center;
+}
+
+#modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#confirmation {
+    width: 90%;
+    background-color: white;
+    padding: 20px 10px; 
+    text-align: center;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+#confirmation button {
+    height: 27px;
+    line-height: 27px;
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    margin: 0;
+    padding: 0 8px;
+    transform: none;
+    font-size: 0.85rem;
+}
+
+#confirmation button:hover {
+    opacity: 0.8;
+}
+
+#confirmation button:active {
+    opacity: 1;
 }
 
 main h1 {
@@ -702,4 +734,13 @@ footer .contact li a:hover {
 
 footer .contact li a:active {
     opacity: 1;
+}
+
+.animate {
+    animation: zoom 0.4s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
 }
