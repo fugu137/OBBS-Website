@@ -235,7 +235,7 @@ header {
 
 .button-bar {
     display: flex;
-    width: 75%;
+    width: 80%;
     align-items: center;
     justify-content: left;
     column-gap: 20px;
