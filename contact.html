@@ -14,21 +14,23 @@
         <div id="logobar">
             <a href="index.html"><img id="logo" src="images/logo.png" alt="logo" /></a>
         </div>
-        <aside id="ad2">Contact us now for a free initial consultation:<a
+        <nav id="navbar">
+            <img id="menubutton" src="icons/menu_black.svg" alt="menu-button" onclick="menu.classList.toggle('open')" />
+            <ul id="menu">
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li class="selected"><a href="contact.html">Contact</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+        </nav>
+        <aside id="ad2">
+            Contact us now for a free initial consultation:<a
                 href="mailto: info@obbs.com.au">info@obbs.com.au</a>&nbsp;OR&nbsp;<a class="green"
-                href="tel: +61 434 091 491"><strong>0434 091 491</strong></a></aside>
+                href="tel: +61 434 091 491"><strong>0434 091 491</strong></a>
+        </aside>
     </header>
-    <nav id="navbar">
-        <img id="menubutton" src="icons/menu_black.svg" alt="menu-button" onclick="menu.classList.toggle('open')" />
-        <ul id="menu">
-            <li><a href="index.html">Welcome</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="clients.html">Clients</a></li>
-            <li class="selected"><a href="contact.html">Contact</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-            <li><a href="links.html">Links</a></li>
-        </ul>
-    </nav>
 
     <section id="modal">
         <article id="confirmation" class="animate">
@@ -41,21 +43,23 @@
     <main>
         <section>
             <h1>Contact Form</h1>
-            <form id="form" target="iframe" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPz-mMhVY5Vj_2WIYmWww33Wa8pK4jbg7o4cJP3G94Q0X3Hw/formResponse" method="post">
+            <form id="form" target="iframe"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPz-mMhVY5Vj_2WIYmWww33Wa8pK4jbg7o4cJP3G94Q0X3Hw/formResponse"
+                method="post">
                 <label for="name">Name:</label><br>
-                <input id="name" name="entry.2037627819" type="text" required ><br>
+                <input id="name" name="entry.2037627819" type="text" required><br>
 
                 <label for="email">Email Address:</label><br>
-                <input id="email" name="emailAddress" type="email" required ><br>
+                <input id="email" name="emailAddress" type="email" required><br>
 
                 <label for="subject">Subject:</label><br>
-                <input id="subject" name="entry.450508654" type="text" ><br>
+                <input id="subject" name="entry.450508654" type="text"><br>
 
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="entry.1676172741" required></textarea><br>
 
                 <input type="submit" value="Submit">
-            </form> 
+            </form>
 
             <iframe id="iframe" name="iframe" hidden></iframe>
 
