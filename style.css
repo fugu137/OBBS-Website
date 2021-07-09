@@ -19,7 +19,7 @@
 
     --slogan-font-size-smallscreen: 25px;
     --slogan-font-size-mediumscreen: 32px;
-    --slogan-font-size-largescreen: 38px;
+    --slogan-font-size-largescreen: 36px;
 
     --logobar-height-smallscreen: 70px;
     --logobar-height-mediumscreen: 80px;
@@ -486,12 +486,14 @@ main h3 {
     color: var(--primary-color);
 }
 
-main em {
+main h4 {
     font-size: 1rem;
     text-align: center;
     line-height: 1.5;
     color: var(--charcoal-color);
     margin: 0 20px 20px 20px;
+    font-weight: normal;
+    font-style: italic;
 }
 
 main ul {
@@ -582,12 +584,6 @@ main ol li {
     padding-left: 2px;
     margin-left: 5%;
 }
-
-/* .bullet-list li p {
-    line-height: 1.5;
-    font-size: 0.9rem;
-    margin-left: 5%; 
-} */
 
 .testimonials {
     padding-top: 0px;
@@ -777,7 +773,7 @@ footer .contact li a:active {
     to {transform: scale(1);}
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 520px) {
     * {
         font-size: var(--font-size-mediumscreen);
     }
@@ -845,26 +841,45 @@ footer .contact li a:active {
         background-image: var(--banner-image-mediumscreen);
     }
     .banner-content li {
-        font-size: 1.6rem;
+        font-size: 1.63rem;
     }
     #slogan {
         font-size: var(--slogan-font-size-largescreen);
         margin-top: 10px;
+    }
+    .button-bar a {
+        font-size: 0.9rem;
     }
     #logobar {
         height: var(--logobar-height-mediumscreen);
     }
     #ad {
         height: var(--ad-height-mediumscreen);
+        font-size: 0.9rem;
     }
     #navbar {
         height: var(--logobar-height-mediumscreen);
     }
     #navbar ul.open {
         top: var(--logobar-height-mediumscreen);
+        width: 180px;
+    }
+    #headshot {
+        max-width: 240px;
+    }
+    #headshot.large {
+        max-width: 260px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    main h4 {
+        margin-bottom: 25px;
     }
     .testimonials li {
         max-width: 380px;
         height: 92px;
+    }
+    section form input[type=submit] {
+        height: 38px;
     }
 }
