@@ -4,7 +4,7 @@
     /* --- Colours --- */
     /* Values are: hue, saturation %, lightness %, opacity (between 0 and 1; 0 = transparent, 1 = opaque) */
     --primary-color-light: hsl(202, 70%, 45%);
-    --primary-color: hsl(202, 70%, 40%);
+    --primary-color: hsl(202, 70%, 41%);
     --primary-color-dark: hsl(202, 100%, 35%);
     --secondary-color-light: hsl(150, 60%, 47%);
     --secondary-color: hsl(150, 100%, 35%);
@@ -14,12 +14,21 @@
     --charcoal-color: hsl(0, 0%, 25%);
 
     /* --- Other --- */
-    --banner-image: url(images/aerial_beach_medium.jpg);
+    --banner-image-smallscreen: url(images/aerial_beach_medium.jpg);
+    --banner-image-mediumscreen: url(images/aerial_beach2.jpg);
+
     --slogan-font-size-smallscreen: 25px;
+    --slogan-font-size-mediumscreen: 32px;
+    --slogan-font-size-largescreen: 38px;
+
     --logobar-height-smallscreen: 70px;
-    --ad-height: 42px;
+    --logobar-height-mediumscreen: 80px;
+
+    --ad-height-smallscreen: 42px;
+    --ad-height-mediumscreen: 48px;
 
     --font-size-smallscreen: 18px;
+    --font-size-mediumscreen: 20px;
 }
 
 * {
@@ -75,9 +84,10 @@ header {
     right: 0;
     background-color: rgba(255, 255, 255, 0.8);
     list-style: none;
-    line-height: var(--ad-height);
+    line-height: var(--ad-height-smallscreen);
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: -1px 1px 1px 1px hsla(0, 0%, 60%, 0.1);
+    z-index: 10;
 }
 
 #navbar ul.open li a {
@@ -89,7 +99,7 @@ header {
     cursor: pointer;
     user-select: none;
     text-decoration: none;
-    height: var(--ad-height);
+    height: var(--ad-height-smallscreen);
 }
 
 #navbar ul.open li.selected a {
@@ -138,7 +148,7 @@ header {
 }
 
 #banner {
-    background-image: var(--banner-image);
+    background-image: var(--banner-image-smallscreen);
     width: 100%;
     height: 90vw;
     background-position: 80% bottom;
@@ -158,8 +168,8 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: var(--ad-height);
-    font-size: 0.88em;
+    height: var(--ad-height-smallscreen);
+    font-size: 0.88rem;
     text-shadow: 0 0 1px var(--tertiary-color-dark);
     /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1); */
 }
@@ -178,9 +188,9 @@ header {
 }
 
 #ad2 {
-    font-size: 0.9rem;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -191,7 +201,11 @@ header {
     background-color: hsla(0, 0%, 85%, 0.4);
 }
 
-#ad2 a {
+#ad2 p {
+    font-size: 0.9rem;
+}
+
+#ad2 p a {
     font-size: 1em;
 }
 
@@ -213,7 +227,7 @@ header {
 }
 
 .banner-content li {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     color: white;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
     font-weight: bold;
@@ -229,7 +243,7 @@ header {
 
 .button-bar a {
     color: white;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 .button-bar a:hover {
@@ -241,7 +255,7 @@ header {
 }
 
 #CTA {
-    font-size: 0.85em;
+    font-size: 0.85rem;
     color: white;
     background-color: var(--tertiary-color);
     border: 1px solid var(--tertiary-color-dark);
@@ -276,19 +290,33 @@ main section {
     flex-direction: column;
     align-items: center;
     justify-content: left;
-    padding: 20px 4%;
+    padding: 20px 2.5%;
 }
 
 main section .logo {
-    max-width: 180px;
+    max-height: 42px;
     margin-top: 5px;
     margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1rem;
+    color: black;
+    margin: 2px 0 12px 0;
+    max-width: 25rem;
+    text-align: left;
+    line-height: 1.5;
+    width: 100%;
+} 
+
+section p.centered { 
+    text-align: center;
 }
 
 section blockquote {
     position: relative;
     width: 100%;
-    max-width: 30rem;
+    max-width: 25rem;
     margin: 4px 0;
 }
 
@@ -317,7 +345,7 @@ section blockquote cite em {
 
 section .links {
     width: 100%;
-    max-width: 30em;
+    max-width: 25rem;
     margin-top: 20px;
     margin-bottom: 35px;
 }
@@ -349,10 +377,6 @@ section form textarea {
     height: 120px;
 }
 
-section iframe {
-    width: 100%;
-}
-
 section form input[type=submit] {
     margin-top: 5px;
     border-radius: 0;
@@ -377,7 +401,7 @@ section button {
     color: white;
     margin-left: 50%;
     transform: translateX(-50%);
-    border: 1px solid var(--tertiary-color-dark);
+    border: 1px solid var(--tertiary-color);
     height: 37px;
     line-height: 37px;
     padding: 0 10px;
@@ -387,25 +411,15 @@ section button {
 }
 
 section button:hover {
-    background-color: var(--tertiary-color-dark);
+    background-color: var(--tertiary-color-light);
 }
 
 section button:active {
     background-color: var(--tertiary-color);
 }
 
-section p {
-    font-size: 1em;
-    color: black;
-    margin: 2px 0 12px 0;
-    max-width: 30em;
-    text-align: left;
-    line-height: 1.5;
-    width: 100%;
-} 
-
-section p.centered { 
-    text-align: center;
+br {
+    display: none;
 }
 
 #modal {
@@ -449,7 +463,7 @@ section p.centered {
 }
 
 main h1 {
-    font-size: 0.95em;
+    font-size: 0.95rem;
     text-transform: uppercase;
     width: 100%;
     text-align: center;
@@ -459,7 +473,7 @@ main h1 {
 
 main h2 {
     display: inline-block;
-    font-size: 1em;
+    font-size: 1rem;
     margin-bottom: 10px;
     margin-top: 10px;
     color: var(--charcoal-color);
@@ -467,13 +481,13 @@ main h2 {
 
 main h3 {
     display: inline-block;
-    font-size: 1em;
+    font-size: 1rem;
     margin-bottom: 5px;
-    color: var(--primary-color-light);
+    color: var(--primary-color);
 }
 
 main em {
-    font-size: 1em;
+    font-size: 1rem;
     text-align: center;
     line-height: 1.5;
     color: var(--charcoal-color);
@@ -484,15 +498,21 @@ main ul {
     list-style: none;
     line-height: 1.75;
     margin-bottom: 10px;
+    max-width: 25rem;
 }
 
 main ol {
     list-style: none;
+    max-width: 25rem;
 }
 
 main li {
     font-size: var(--font-size-smallscreen);
     color: black;
+}
+
+main li p {
+    font-size: 0.95rem;
 }
 
 main ol li {
@@ -503,10 +523,15 @@ main ol li {
     line-height: 1.3;
 }
 
+.link-list h2 a {
+    color: var(--primary-color);
+}
+
 .link-list ul {
     list-style-type: disc;
     list-style-position: inside;
     margin: 5px 5%;
+    margin-bottom: 15px;
 }
 
 .link-list li {
@@ -519,12 +544,12 @@ main ol li {
 }
 
 .link-list ul li {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 0;
 }
 
 .link-list ul li a {
-    font-size: 0.9rem;
+    font-size: 1em;
 }
 
 .link-list .special-list {
@@ -540,6 +565,12 @@ main ol li {
     list-style-type: square;
     list-style-position: outside;
     width: 100%;
+    max-width: 25rem;
+}
+
+.bullet-list.large {
+    margin-top: 8px;
+    margin-bottom: 14px;
 }
 
 .bullet-list li h3 {
@@ -552,11 +583,11 @@ main ol li {
     margin-left: 5%;
 }
 
-.bullet-list li p {
+/* .bullet-list li p {
     line-height: 1.5;
     font-size: 0.9rem;
-    /* margin-left: 5%; */
-}
+    margin-left: 5%; 
+} */
 
 .testimonials {
     padding-top: 0px;
@@ -571,9 +602,8 @@ main ol li {
     width: 100%;
     max-width: 350px;
     height: 84px;
-    
     margin-bottom: 20px;
-    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
@@ -586,7 +616,7 @@ main ol li {
 }
 
 .testimonials li:hover {
-    box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.25);
 }
 
 .testimonials img {
@@ -627,7 +657,7 @@ strong {
 }
 
 main a {
-    font-size: 1em;
+    font-size: 1rem;
     color: var(--primary-color-dark);
 }
 
@@ -653,7 +683,7 @@ footer {
 }
 
 footer h4 {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     text-align: center;
     width: 100%;
     font-weight: normal;
@@ -696,12 +726,12 @@ footer .social img {
 
 footer p {
     margin-top: 12px;
-    font-size: 0.7em;
+    font-size: 0.7rem;
     text-align: center;
 }
 
 footer .contact {
-    font-size: 1em;
+    font-size: 1rem;
     width: 100%;
     background-color: var(--primary-color);
     height: calc(var(--logobar-height-smallscreen) * 1.7);
@@ -719,13 +749,13 @@ footer .contact ul {
 }
 
 footer .contact li {
-    font-size: 0.95em;
+    font-size: 0.95rem;
     color: white;
     text-align: center;
 }
 
 footer .contact li a {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: white;
     text-decoration: none;
 }
@@ -745,4 +775,96 @@ footer .contact li a:active {
 @keyframes zoom {
     from {transform: scale(0);}
     to {transform: scale(1);}
+}
+
+@media screen and (min-width: 500px) {
+    * {
+        font-size: var(--font-size-mediumscreen);
+    }
+    #menubutton {
+        margin: 0 15px;
+    }
+    #slogan {
+        font-size: var(--slogan-font-size-mediumscreen);
+    }
+    main section {
+        padding: 20px 5%;
+    }
+    main section p {
+        line-height: 1.5;
+    }
+    main section h1 {
+        margin: 10px 0;
+    }
+    main section .logo {
+        margin-top: 20px;
+        margin-bottom: 35px;
+        max-height: 55px;
+    }
+    section button {
+        font-size: 0.9rem;
+    }
+    section blockquote p {
+        padding-left: 5%;
+    }
+    section form input[type=submit] {
+        height: 36px;
+    }
+    section form textarea {
+        height: 260px;
+    }
+    br {
+        display: initial;
+    }
+    #headshot {
+        max-width: 220px;
+    }
+    .button-bar {
+        column-gap: 30px;
+        width: 78%;
+    }
+    .button-bar a {
+        font-size: 0.85rem;
+    }
+    #CTA {
+        height: 38px;
+        font-size: 0.9rem;
+    }
+    .credentials img {
+        height: 115px;
+    }
+    .bullet-list.large {
+        margin-top: 18px;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #banner {
+        height: 480px;
+        background-image: var(--banner-image-mediumscreen);
+    }
+    .banner-content li {
+        font-size: 1.6rem;
+    }
+    #slogan {
+        font-size: var(--slogan-font-size-largescreen);
+        margin-top: 10px;
+    }
+    #logobar {
+        height: var(--logobar-height-mediumscreen);
+    }
+    #ad {
+        height: var(--ad-height-mediumscreen);
+    }
+    #navbar {
+        height: var(--logobar-height-mediumscreen);
+    }
+    #navbar ul.open {
+        top: var(--logobar-height-mediumscreen);
+    }
+    .testimonials li {
+        max-width: 380px;
+        height: 92px;
+    }
 }
