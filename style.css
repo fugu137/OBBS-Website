@@ -8,9 +8,9 @@
     --primary-color-dark: hsl(202, 100%, 35%);
     --secondary-color-light: hsl(150, 60%, 47%);
     --secondary-color: hsl(150, 100%, 35%);
-    --tertiary-color-light: hsl(40, 85%, 57%);
-    --tertiary-color: hsl(40, 90%, 50%);
-    --tertiary-color-dark: hsl(40, 95%, 47%);
+    --tertiary-color-light: hsl(40, 80%, 62%);
+    --tertiary-color: hsl(40, 85%, 55%);
+    --tertiary-color-dark: hsl(40, 90%, 52%);
     --charcoal-color: hsl(0, 0%, 25%);
 
     /* --- Other --- */
@@ -21,7 +21,7 @@
     --slogan-font-size-mediumscreen: 32px;
     --slogan-font-size-largescreen: 36px;
 
-    --logobar-height-smallscreen: 70px;
+    --logobar-height-smallscreen: 64px;
     --logobar-height-mediumscreen: 80px;
 
     --ad-height-smallscreen: 42px;
@@ -260,9 +260,9 @@ header {
     background-color: var(--tertiary-color);
     border: 1px solid var(--tertiary-color-dark);
     padding: 0 8px; 
-    height: 33px;
+    height: 32px;
     line-height: 5px;
-    padding-bottom: 1px;
+    /* padding-bottom: 1px; */
     font-family: 'Noto Sans', sans-serif;
     cursor: pointer;
     text-shadow: 0 0 1px var(--tertiary-color-dark);
