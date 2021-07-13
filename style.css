@@ -18,7 +18,7 @@
     --banner-image-mediumscreen: url(images/aerial_beach_medium.jpg);
     --banner-image-largescreen: url(images/aerial_beach_large.jpg);
 
-    --slogan-font-size-smallscreen: 25px;
+    --slogan-font-size-smallscreen: 24px;
     --slogan-font-size-mediumscreen: 32px;
     --slogan-font-size-largescreen: 36px;
 
@@ -152,7 +152,7 @@ header {
 #banner {
     background-image: var(--banner-image-smallscreen);
     width: 100%;
-    height: 90vw;
+    height: 95vw;
     background-position: 80% bottom;
     background-repeat: no-repeat;
     background-size: 160% 160%;
@@ -223,7 +223,7 @@ header {
 
 .banner-content {
     list-style-type: none;
-    line-height: 1.5;
+    line-height: 1.6;
     list-style-position: inside;
     width: 85%;
 }
@@ -329,6 +329,7 @@ main section .logo {
 .extra-content .bullet-list {
     margin-bottom: 4px;
     margin-top: 8px;
+    margin-left: 6px;
 }
 
 .extra-content aside {
