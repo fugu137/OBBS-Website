@@ -5,7 +5,7 @@
     /* Values are: hue, saturation %, lightness %, opacity (between 0 and 1; 0 = transparent, 1 = opaque) */
     --primary-color-light: hsl(202, 70%, 45%);
     --primary-color: hsl(202, 70%, 41%);
-    --primary-color-dark: hsl(202, 100%, 35%);
+    --primary-color-dark: hsl(202, 100%, 37%);
     --secondary-color-light: hsl(150, 60%, 47%);
     --secondary-color: hsl(150, 100%, 35%);
     --tertiary-color-light: hsl(40, 80%, 62%);
@@ -14,8 +14,9 @@
     --charcoal-color: hsl(0, 0%, 25%);
 
     /* --- Other --- */
-    --banner-image-smallscreen: url(images/aerial_beach_medium.jpg);
-    --banner-image-mediumscreen: url(images/aerial_beach2.jpg);
+    --banner-image-smallscreen: url(images/aerial_beach_small.jpg);
+    --banner-image-mediumscreen: url(images/aerial_beach_medium.jpg);
+    --banner-image-largescreen: url(images/aerial_beach_large.jpg);
 
     --slogan-font-size-smallscreen: 25px;
     --slogan-font-size-mediumscreen: 32px;
@@ -23,6 +24,7 @@
 
     --logobar-height-smallscreen: 64px;
     --logobar-height-mediumscreen: 80px;
+    --logobar-height-largescreen: 100px;
 
     --ad-height-smallscreen: 42px;
     --ad-height-mediumscreen: 48px;
@@ -75,15 +77,15 @@ header {
 
 #navbar ul {
     display: none;
+    list-style: none;
 }
 
 #navbar ul.open {
     position: absolute;
-    display: block;
-    top: var(--logobar-height-smallscreen);
     right: 0;
+    top: var(--logobar-height-smallscreen);
     background-color: rgba(255, 255, 255, 0.8);
-    list-style: none;
+    display: block;
     line-height: var(--ad-height-smallscreen);
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: -1px 1px 1px 1px hsla(0, 0%, 60%, 0.1);
@@ -299,6 +301,50 @@ main section .logo {
     margin-bottom: 20px;
 }
 
+.extra-content {
+    padding-top: 0;
+}
+
+.extra-content p {
+    margin-bottom: 0;
+}
+
+.extra-content h2 {
+    width: 100%;
+    max-width: 25em;
+    text-align: left; 
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+.extra-content h3 {
+    width: 100%;
+    max-width: 25em;
+    text-align: left; 
+    margin-bottom: 0;
+    margin-top: 8px;
+    color: var(--secondary-color);
+}
+
+.extra-content .bullet-list {
+    margin-bottom: 4px;
+    margin-top: 8px;
+}
+
+.extra-content aside {
+    width: 100%;
+    max-width: 25rem;
+    margin-top: 15px;
+}
+
+.extra-content aside h2 {
+    color: var(--primary-color);
+}
+
+.extra-content aside button {
+    margin-top: 20px;
+}
+
 section p {
     font-size: 1rem;
     color: black;
@@ -509,7 +555,7 @@ main ol {
 }
 
 main li {
-    font-size: var(--font-size-smallscreen);
+    /* font-size: var(--font-size-smallscreen); */
     color: black;
 }
 
@@ -568,6 +614,7 @@ main ol li {
     list-style-position: outside;
     width: 100%;
     max-width: 25rem;
+    line-height: 1.5;
 }
 
 .bullet-list.large {
@@ -686,6 +733,11 @@ footer h4 {
     margin-top: 6px;
 }
 
+footer #ad {
+    background-color: hsla(281, 5%, 20%, 0.5);
+    text-shadow: none;
+}
+
 .credentials {
     display: flex;
     justify-content: center;
@@ -729,8 +781,8 @@ footer p {
 footer .contact {
     font-size: 1rem;
     width: 100%;
-    background-color: var(--primary-color);
-    height: calc(var(--logobar-height-smallscreen) * 1.7);
+    background-color: var(--primary-color-dark);
+    height: calc(var(--logobar-height-smallscreen) * 1.8);
     padding: 0 5px;
 }
 
@@ -782,6 +834,12 @@ footer .contact li a:active {
     }
     #slogan {
         font-size: var(--slogan-font-size-mediumscreen);
+    }
+    .banner-content {
+        line-height: 1.5;
+    }
+    .banner-content li {
+        font-size: 1.5rem;
     }
     main section {
         padding: 20px 5%;
@@ -881,5 +939,141 @@ footer .contact li a:active {
     }
     section form input[type=submit] {
         height: 38px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    /* * {
+        font-size: var(--font-size-mediumscreen);
+    } */
+    #logo {
+        margin-left: 60px;
+        max-width: 325px;
+    }
+    #logobar {
+        height: var(--logobar-height-largescreen);
+    }
+    #navbar {
+        height: var(--logobar-height-largescreen);
+        max-width: none;
+        width: auto;
+        left: 400px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding-right: 60px;
+    }
+    #navbar ul {
+        display: flex;
+        column-gap: 28px;
+    }
+    #navbar li {
+        color: black;
+        padding-top: 10px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    #navbar li.selected {
+        border-bottom: 2px solid black;
+    }
+    #navbar li a {
+        font-size: 0.8rem;
+        opacity: 0.9;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    #navbar li:hover {
+        border-bottom: 2px solid black;
+        border-color: var(--secondary-color);
+    }
+    #navbar li:hover a {
+        color: var(--secondary-color);
+    } 
+    #navbar li:hover a:visited {
+        color: var(--secondary-color);
+    }
+    #navbar li a:visited {
+        color: black;
+    }
+    #menubutton {
+        display: none;
+    }
+    #banner {
+        background-image: var(--banner-image-largescreen);
+        height: 350px;
+        background-position: bottom 50px;
+        align-items: flex-start;
+        position: relative;
+        justify-content: center;
+    }
+    #slogan {
+        font-size: var(--slogan-font-size-largescreen);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+    .banner-content {
+        margin-left: 60px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+    .banner-content li {
+        font-size: 1.4rem;
+    }
+    .button-bar {
+        margin-left: 80px;
+        margin-bottom: 20px;
+        column-gap: 40px;
+    }
+    #CTA,
+    .button-bar a {
+        font-size: 0.8rem;
+    }
+    #CTA {
+        height: 34px;
+    }
+    main section p {
+        max-width: 35rem;
+        line-height: 1.7;
+    }
+    main section h1 {
+        margin-top: 20px;
+    }
+    /* .extra-content {
+        display: flex;
+    } */
+    .extra-content h2 {
+        color: var(--primary-color-light);
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .extra-content .bullet-list {
+        max-width: 35rem;
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+    .extra-content aside {
+        width: 100%;
+        max-width: 35rem;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .extra-content aside button {
+        margin-left: 0;
+        transform: none;
+        font-size: 0.85rem;
+        margin-top: 20px;
+    }
+    footer #ad {
+        display: none;
+    }
+    footer .contact {
+        height: 165px;
+        padding-top: 10px;
     }
 }
