@@ -225,7 +225,7 @@ header {
     list-style-type: none;
     line-height: 1.6;
     list-style-position: inside;
-    width: 85%;
+    width: 90%;
 }
 
 .banner-content li {
@@ -402,6 +402,10 @@ section .links p {
     font-size: 0.9rem;
 }
 
+section .links p a {
+    font-size: 1em;
+}
+
 section form {
     max-width: 450px;
     width: 100%;
@@ -416,12 +420,12 @@ section form textarea {
     margin-bottom: 15px;
     width: 100%;
     font-size: 0.9rem;
-    padding: 2px 1px 0 1px;
+    padding: 6px 4px 4px 4px;
     resize: vertical;
 }
 
 section form textarea {
-    height: 120px;
+    height: 140px;
 }
 
 section form input[type=submit] {
@@ -566,6 +570,10 @@ main li p {
 
 main ol li {
     margin-top: 20px;
+}
+
+.link-list {
+    width: 100%;
 }
 
 .link-list h2 {
@@ -962,7 +970,7 @@ footer .contact li a:active {
         display: flex;
         justify-content: right;
         align-items: center;
-        padding-right: 60px;
+        padding-right: 62px;
     }
     #navbar ul {
         display: flex;
@@ -973,22 +981,26 @@ footer .contact li a:active {
         padding-top: 10px;
         padding-left: 2px;
         padding-right: 2px;
+        /* transition-delay: 0.05s; */
     }
     #navbar li.selected {
         border-bottom: 2px solid black;
+        color: black;
     }
     #navbar li a {
         font-size: 0.8rem;
         opacity: 0.9;
         text-transform: uppercase;
         text-decoration: none;
+        color: black;
     }
     #navbar li:hover {
-        border-bottom: 2px solid black;
-        border-color: var(--secondary-color);
+        border-bottom: 2px solid var(--secondary-color);;
+        color: black;
     }
     #navbar li:hover a {
         color: var(--secondary-color);
+        /* transition-delay: 0.05s; */
     } 
     #navbar li:hover a:visited {
         color: var(--secondary-color);
@@ -1002,7 +1014,8 @@ footer .contact li a:active {
     #banner {
         background-image: var(--banner-image-largescreen);
         height: 350px;
-        background-position: bottom 50px;
+        background-position: bottom 50%;
+        background-size: 150%;
         align-items: flex-start;
         position: relative;
         justify-content: center;
@@ -1026,16 +1039,17 @@ footer .contact li a:active {
         font-size: 1.4rem;
     }
     .button-bar {
-        margin-left: 80px;
+        margin-left: 70px;
         margin-bottom: 20px;
         column-gap: 40px;
     }
     #CTA,
     .button-bar a {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     #CTA {
-        height: 34px;
+        height: 39px;
+        padding: 0 12px;
     }
     main section p {
         max-width: 35rem;
@@ -1044,14 +1058,68 @@ footer .contact li a:active {
     main section h1 {
         margin-top: 20px;
     }
-    /* .extra-content {
+    section blockquote {
+        max-width: 35rem;
+        margin-top: 15px;
+    }
+    section blockquote p {
+        font-size: 0.95rem;
+    }
+    section blockquote cite {
+        margin-top: 20px;
+    }
+    section .links {
+        max-width: 35rem;
+        margin-bottom: 50px;
+    }
+    section .links p {
+        font-size: 0.95rem;
+    }
+    main ol {
+        max-width: 35rem;
+    }
+    main li p {
+        font-size: 1rem;
+        /* margin-left: 25px;
+        max-width: calc(35rem - 25px); */
+    }
+    .bullet-list {
+        max-width: 35rem;
+    }
+    .link-list {
+        max-width: 35rem;
+    }
+    .link-list ul li {
+        font-size: 0.95rem;
+    }
+    .link-list li .special-list li {
+        font-size: 1rem;
+    }
+    .testimonials ul {
         display: flex;
-    } */
+        flex-wrap: wrap;
+        column-gap: 20px;
+        justify-content: center;
+        max-width: 35rem;
+    }
+    .testimonials li {
+        max-width: 340px;
+    }
+    .testimonials li a:hover {
+        opacity: 0.9;
+    }
+    .testimonials li:last-of-type {
+       margin-right: auto;
+    }
     .extra-content h2 {
         color: var(--primary-color-light);
         width: 100%;
         text-align: left;
         margin-bottom: 0;
+    }
+    .extra-content h3 {
+        width: 100%;
+        max-width: 35rem;
     }
     .extra-content .bullet-list {
         max-width: 35rem;
@@ -1061,14 +1129,22 @@ footer .contact li a:active {
     .extra-content aside {
         width: 100%;
         max-width: 35rem;
-        margin-top: 5px;
+        margin-top: 25px;
         margin-bottom: 10px;
     }
+    .extra-content aside h2 {
+        margin-top: 12px;
+    }
     .extra-content aside button {
-        margin-left: 0;
-        transform: none;
+        display: block;
         font-size: 0.85rem;
-        margin-top: 20px;
+        margin-top: 25px;
+    }
+    #form {
+        max-width: 30rem;
+    }
+    #form textarea {
+        height: 300px;
     }
     footer #ad {
         display: none;
