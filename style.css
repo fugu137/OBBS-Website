@@ -135,7 +135,7 @@ header {
     height: var(--logobar-height-smallscreen);
     display: flex;
     align-items: center;
-    box-shadow: 0 1px 1px 0 rgba(128, 128, 128, 0.5);
+    box-shadow: 0 1px 1px 0 rgba(128, 128, 128, 0.3);
 }
 
 #logobar a {
@@ -202,13 +202,12 @@ header {
     flex-wrap: wrap;
     line-height: 1.5;
     padding: 12px 0;
-    /* border-top: 1px solid var(--tertiary-color);
-    border-bottom: 1px solid var(--tertiary-color); */
     background-color: hsla(0, 0%, 85%, 0.4);
+    font-size: 0.9rem;
 }
 
 #ad2 p {
-    font-size: 0.9rem;
+    font-size: 1em;
 }
 
 #ad2 p a {
@@ -241,10 +240,10 @@ header {
 
 .button-bar {
     display: flex;
-    width: 80%;
+    width: 83%;
     align-items: center;
     justify-content: left;
-    column-gap: 20px;
+    column-gap: 25px;
 }
 
 .button-bar a {
@@ -425,11 +424,11 @@ section form textarea {
     width: 100%;
     font-size: 0.9rem;
     padding: 6px 4px 4px 4px;
-    resize: vertical;
 }
 
 section form textarea {
     height: 140px;
+    resize: vertical;
 }
 
 section form input[type=submit] {
@@ -1160,6 +1159,10 @@ footer .contact li a:active {
     }
     #form textarea {
         height: 300px;
+    }
+    section form input,
+    section form textarea {
+        padding: 6px 4px 2px 4px;
     }
     footer {
         margin-top: 40px;
