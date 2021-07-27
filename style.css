@@ -45,16 +45,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 1px 0 rgba(128, 128, 128, 0.5);
 }
 
 header {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-#logobar a {
-    display: flex;
 }
 
 #logo {
@@ -135,7 +135,11 @@ header {
     height: var(--logobar-height-smallscreen);
     display: flex;
     align-items: center;
-    box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.5);
+    box-shadow: 0 1px 2px 0 rgba(128, 128, 128, 0.5);
+}
+
+#logobar a {
+    display: flex;
 }
 
 #menubutton {
@@ -160,7 +164,7 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* padding: 5% 0; */
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 #ad {
@@ -173,7 +177,7 @@ header {
     height: var(--ad-height-smallscreen);
     font-size: 0.88rem;
     text-shadow: 0 0 1px var(--tertiary-color-dark);
-    /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 #ad a {
@@ -268,7 +272,7 @@ header {
     font-family: 'Noto Sans', sans-serif;
     cursor: pointer;
     text-shadow: 0 0 1px var(--tertiary-color-dark);
-    /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 #CTA:hover {
@@ -655,7 +659,7 @@ main ol li {
     max-width: 350px;
     height: 84px;
     margin-bottom: 20px;
-    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
 
@@ -668,7 +672,7 @@ main ol li {
 }
 
 .testimonials li:hover {
-    box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .testimonials img {
@@ -793,6 +797,7 @@ footer .contact {
     background-color: var(--primary-color-dark);
     height: calc(var(--logobar-height-smallscreen) * 1.8);
     padding: 0 5px;
+    box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 footer .contact ul {
@@ -955,6 +960,9 @@ footer .contact li a:active {
     /* * {
         font-size: var(--font-size-mediumscreen);
     } */
+    body {
+        max-width: 1600px;
+    }
     #logo {
         margin-left: 60px;
         max-width: 325px;
@@ -1013,9 +1021,9 @@ footer .contact li a:active {
     }
     #banner {
         background-image: var(--banner-image-largescreen);
-        height: 350px;
-        background-position: bottom 50%;
-        background-size: 150%;
+        height: 340px;
+        /* background-position: bottom 50%; */
+        background-size: 180%;
         align-items: flex-start;
         position: relative;
         justify-content: center;
@@ -1137,14 +1145,24 @@ footer .contact li a:active {
     }
     .extra-content aside button {
         display: block;
-        font-size: 0.85rem;
-        margin-top: 25px;
+        font-size: 0.95rem;
+        margin-top: 30px;
+        height: 39px;
+        padding: 0 12px;  
+        padding-top: 2px;  
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+    #services-button {
+        display: none;
     }
     #form {
         max-width: 30rem;
     }
     #form textarea {
         height: 300px;
+    }
+    footer {
+        margin-top: 40px;
     }
     footer #ad {
         display: none;
