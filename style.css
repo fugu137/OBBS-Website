@@ -10,7 +10,7 @@
     --secondary-color: hsl(150, 100%, 35%);
     --tertiary-color-light: hsl(40, 80%, 62%);
     --tertiary-color: hsl(40, 85%, 55%);
-    --tertiary-color-dark: hsl(40, 90%, 52%);
+    --tertiary-color-dark: hsl(40, 90%, 51%);
     --charcoal-color: hsl(0, 0%, 25%);
 
     /* --- Other --- */
@@ -224,6 +224,10 @@ header {
     font-size: 1em;
 }
 
+#ad p a {
+    color: var(--tertiary-color-dark);
+}
+
 #slogan {
     display: block;
     font-size: var(--slogan-font-size-smallscreen);
@@ -356,7 +360,7 @@ main section .logo {
 }
 
 .extra-content aside button {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 section p {
@@ -667,7 +671,7 @@ main ol li {
 .testimonials li {
     width: 100%;
     max-width: 350px;
-    height: 84px;
+    height: 80px;
     margin-bottom: 20px;
     box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
