@@ -135,7 +135,7 @@ header {
     height: var(--logobar-height-smallscreen);
     display: flex;
     align-items: center;
-    box-shadow: 0 1px 1px 0 rgba(128, 128, 128, 0.3);
+    box-shadow: 0 1px 1px 0 rgba(128, 128, 128, 0.25);
 }
 
 #logobar a {
@@ -153,7 +153,8 @@ header {
     opacity: 0.7;
 }
 
-#banner {
+#banner,
+#banner2 {
     background-image: var(--banner-image-smallscreen);
     width: 100%;
     height: 95vw;
@@ -164,10 +165,14 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); */
 }
 
-#ad {
+#banner2 {
+    display: none;
+}
+
+/* #ad {
     color: white;
     background-color: var(--tertiary-color);
     display: flex;
@@ -183,16 +188,9 @@ header {
 #ad a {
     font-size: 1em;
     color: white;
-} 
+}  */
 
-#ad a:hover {
-    opacity: 0.8;
-}
-
-#ad a:active {
-    opacity: 1;
-}
-
+#ad,
 #ad2 {
     width: 100%;
     display: flex;
@@ -206,10 +204,22 @@ header {
     font-size: 0.9rem;
 }
 
+#ad a:hover,
+#ad2 a:hover {
+    opacity: 0.8;
+}
+
+#ad a:active,
+#ad2 a:active {
+    opacity: 1;
+}
+
+#ad p,
 #ad2 p {
     font-size: 1em;
 }
 
+#ad p a,
 #ad2 p a {
     font-size: 1em;
 }
@@ -228,7 +238,7 @@ header {
     list-style-type: none;
     line-height: 1.6;
     list-style-position: inside;
-    width: 90%;
+    width: 88%;
 }
 
 .banner-content li {
@@ -240,7 +250,7 @@ header {
 
 .button-bar {
     display: flex;
-    width: 83%;
+    width: 82%;
     align-items: center;
     justify-content: left;
     column-gap: 25px;
@@ -438,6 +448,7 @@ section form input[type=submit] {
     color: white;
     border: 1px solid var(--tertiary-color);
     padding: 7px 0 4px 0;
+    height: 37px;
     cursor: pointer;
     text-shadow: 0 0 4px var(--tertiary-color-dark);
 }
@@ -1018,14 +1029,17 @@ footer .contact li a:active {
     #menubutton {
         display: none;
     }
-    #banner {
+    #banner,
+    #banner2 {
         background-image: var(--banner-image-largescreen);
-        height: 340px;
-        /* background-position: bottom 50%; */
+        height: 350px;
         background-size: 180%;
         align-items: flex-start;
         position: relative;
         justify-content: center;
+    }
+    #banner2 {
+       display: flex;
     }
     #slogan {
         font-size: var(--slogan-font-size-largescreen);
@@ -1058,6 +1072,9 @@ footer .contact li a:active {
         height: 39px;
         padding: 0 12px;
     }
+    #ad2 {
+        display: none;
+    }
     main section p {
         max-width: 35rem;
         line-height: 1.7;
@@ -1082,10 +1099,13 @@ footer .contact li a:active {
     section .links p {
         font-size: 0.95rem;
     }
-    main ol {
+    section ol {
         max-width: 35rem;
     }
-    main li p {
+    section ol p {
+        padding-left: 24px;
+    }
+    section li p {
         font-size: 1rem;
         /* margin-left: 25px;
         max-width: calc(35rem - 25px); */
@@ -1144,7 +1164,7 @@ footer .contact li a:active {
     }
     .extra-content aside button {
         display: block;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin-top: 30px;
         height: 39px;
         padding: 0 12px;  
@@ -1164,6 +1184,9 @@ footer .contact li a:active {
     section form textarea {
         padding: 6px 4px 2px 4px;
     }
+    section form input[type="submit"] {
+        height: 39px;
+    }
     footer {
         margin-top: 40px;
         padding-bottom: 10px;
@@ -1174,6 +1197,7 @@ footer .contact li a:active {
     footer .contact {
         height: 165px;
         padding-top: 10px;
+        box-shadow: none;
     }
     footer h4 {
         font-size: 0.85rem;
