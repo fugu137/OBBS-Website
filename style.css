@@ -4,8 +4,9 @@
     /* --- Colours --- */
     /* Values are: hue, saturation %, lightness %, opacity (between 0 and 1; 0 = transparent, 1 = opaque) */
     --primary-color-light: hsl(202, 70%, 45%);
-    --primary-color: hsl(202, 70%, 41%);
-    --primary-color-dark: hsl(202, 100%, 37%);
+    /* --primary-color: hsl(202, 72%, 42%); */
+    --primary-color: hsl(202, 100%, 37%);
+    --primary-color-dark: hsl(202, 100%, 33%);
     --secondary-color-light: hsl(150, 60%, 47%);
     --secondary-color: hsl(150, 100%, 35%);
     --tertiary-color-light: hsl(40, 80%, 62%);
@@ -41,6 +42,10 @@
     font-size: var(--font-size-smallscreen);
 }
 
+html {
+    background-color: hsla(0, 0%, 80%, 0.25);
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -48,7 +53,8 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 0 1px 0 rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 1px 0 rgba(128, 128, 128, 0.25);
+    background-color: white;
 }
 
 header {
@@ -105,7 +111,7 @@ header {
 }
 
 #navbar ul.open li.selected a {
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color);
     opacity: 0.8;
     color: white;
 }
@@ -121,7 +127,7 @@ header {
 }
 
 #navbar ul.open li.selected a:active {
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color);
     opacity: 0.8;
 }
 
@@ -227,6 +233,10 @@ header {
 #ad p a {
     color: var(--tertiary-color-dark);
 }
+/* 
+#ad p a:visited {
+    color: blue;
+} */
 
 #slogan {
     display: block;
@@ -659,6 +669,10 @@ main ol li {
     margin-left: 5%;
 }
 
+.bullet-list.small li {
+    color: var(--primary-color-dark);
+}
+
 .testimonials {
     padding-top: 0px;
 }
@@ -808,7 +822,7 @@ footer p {
 footer .contact {
     font-size: 1rem;
     width: 100%;
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color);
     height: calc(var(--logobar-height-smallscreen) * 1.8);
     padding: 0 5px;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -1076,8 +1090,14 @@ footer .contact li a:active {
         height: 39px;
         padding: 0 12px;
     }
-    #ad2 {
+    #ad {
         display: none;
+    }
+    #ad2 {
+        height: var(--logobar-height-largescreen);
+    }
+    #ad2 p {
+        line-height: 1.65;
     }
     main section p {
         max-width: 35rem;
@@ -1154,7 +1174,7 @@ footer .contact li a:active {
     }
     .extra-content .bullet-list {
         max-width: 35rem;
-        margin-bottom: 0;
+        margin-bottom: 10px;
         margin-left: 10px;
     }
     .extra-content aside {
