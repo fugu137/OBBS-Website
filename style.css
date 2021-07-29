@@ -458,7 +458,7 @@ section form textarea {
 }
 
 section form textarea {
-    height: 140px;
+    height: 160px;
     resize: vertical;
 }
 
@@ -517,8 +517,6 @@ br {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 10;
     display: none;
-    align-items: center;
-    justify-content: center;
 }
 
 #confirmation {
@@ -528,6 +526,7 @@ br {
     padding: 20px 15px; 
     text-align: center;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6);
+    margin: 50% auto auto auto;
 }
 
 #confirmation button {

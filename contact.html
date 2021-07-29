@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Book Business Solutions</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpg" href="icons/favicon.jpg">    
+    <link rel="icon" type="image/jpg" href="icons/favicon.jpg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:i|Inter:r,b,i">
 </head>
 
@@ -64,14 +64,14 @@
                 <label for="email">Email Address:</label><br>
                 <input id="email" name="emailAddress" type="email" required><br>
 
-                <label for="subject">Subject:</label><br>
-                <input id="subject" name="entry.450508654" type="text"><br>
+                <!-- <label for="subject">Subject:</label><br>
+                <input id="subject" name="entry.450508654" type="text"><br> -->
 
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="entry.1676172741" required></textarea><br>
 
                 <br>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" onclick="formsubmit = true">
             </form>
 
             <iframe id="iframe" name="iframe" hidden></iframe>
@@ -99,7 +99,7 @@
         const menu = document.getElementById("menu");
         window.onscroll = () => menu.classList.remove("open");
 
-        let iframeFirstLoad = true;
+        let formsubmit = false;
 
         const form = document.getElementById("form");
         const iframe = document.getElementById("iframe");
@@ -109,9 +109,11 @@
                 // if (iframeFirstLoad) {
                 //     iframeFirstLoad = false;
                 // } else {
+                if (formsubmit) {
                     const modal = document.getElementById("modal");
                     modal.style.display = "flex";
                     form.reset();
+                }
                 // }
             };
         }
