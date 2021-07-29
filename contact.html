@@ -106,13 +106,13 @@
 
         if (iframe) {
             iframe.onload = () => {
-                if (iframeFirstLoad) {
-                    iframeFirstLoad = false;
-                } else {
+                // if (iframeFirstLoad) {
+                //     iframeFirstLoad = false;
+                // } else {
                     const modal = document.getElementById("modal");
                     modal.style.display = "flex";
                     form.reset();
-                }
+                // }
             };
         }
 

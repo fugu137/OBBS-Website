@@ -523,8 +523,9 @@ br {
 
 #confirmation {
     width: 90%;
+    max-width: 25rem;
     background-color: white;
-    padding: 20px 10px; 
+    padding: 20px 15px; 
     text-align: center;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6);
 }
@@ -532,8 +533,8 @@ br {
 #confirmation button {
     height: 27px;
     line-height: 27px;
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    background-color: var(--primary-color-light);
+    border-color: var(--primary-color-light);
     margin: 0;
     padding: 0 8px;
     transform: none;
@@ -721,7 +722,7 @@ main ol li {
 }
 
 .green {
-    color: var(--secondary-color-light);
+    color: var(--secondary-color);
 }
 
 .small * {
