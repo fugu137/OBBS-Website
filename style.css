@@ -866,7 +866,7 @@ footer .contact li a:active {
 }
 
 .animate {
-    animation: zoom 0.4s;
+    animation: zoom 0.3s;
 }
 
 @keyframes zoom {
@@ -1230,6 +1230,13 @@ footer .contact li a:active {
     }
     section form input[type="submit"] {
         height: 39px;
+    }
+    #confirmation {
+        padding: 25px;
+        margin-top: 20%;
+    }
+    #confirmation button {
+        height: 29px;
     }
     footer {
         margin-top: 40px;

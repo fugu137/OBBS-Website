@@ -106,33 +106,13 @@
 
         if (iframe) {
             iframe.onload = () => {
-                // if (iframeFirstLoad) {
-                //     iframeFirstLoad = false;
-                // } else {
                 if (formsubmit) {
                     const modal = document.getElementById("modal");
-                    modal.style.display = "flex";
+                    modal.style.display = "block";
                     form.reset();
                 }
-                // }
             };
         }
-
-        // const form = document.getElementById("form");
-        // form.addEventListener("submit", handleFormSubmit);
-
-        // function handleFormSubmit(e) {
-        //     const url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPz-mMhVY5Vj_2WIYmWww33Wa8pK4jbg7o4cJP3G94Q0X3Hw/formResponse";
-
-        //     const request = new XMLHttpRequest();
-        //     request.open("POST", url, true);
-
-        //     request.onload = () => window.alert("Form submitted successfully!");
-        //     request.onerror = () => window.alert("Form failed to submit!");
-
-        //     request.send(new FormData(e.target));
-        //     e.preventDefault();
-        // }
     </script>
 </body>
 
