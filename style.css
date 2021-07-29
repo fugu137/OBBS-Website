@@ -142,7 +142,7 @@ header {
     height: var(--logobar-height-smallscreen);
     display: flex;
     align-items: center;
-    box-shadow: 0 1px 8px 0 rgba(128, 128, 128, 0.2);
+    box-shadow: 0 1px 8px 0 rgba(128, 128, 128, 0.25);
 }
 
 #logobar a {
@@ -1063,6 +1063,7 @@ footer .contact li a:active {
         align-items: flex-start;
         position: relative;
         justify-content: center;
+        background-position: 65% bottom;
     }
     #banner2 {
        display: flex;
@@ -1106,6 +1107,9 @@ footer .contact li a:active {
     }
     #ad2 p {
         line-height: 1.65;
+    }
+    main ul {
+        max-width: 35rem;
     }
     main section p {
         max-width: 35rem;
@@ -1200,8 +1204,16 @@ footer .contact li a:active {
         margin-top: 30px;
         height: 47px;
         padding: 0 20px;  
-        padding-top: 2px;  
-        /* box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1); */
+    }
+    .credentials {
+        margin: 40px 0;
+        max-width: 35rem;
+    }
+    .credentials img {
+        height: 160px;
+    }
+    #xero {
+        padding: 24px 6px;
     }
     #services-button {
         display: none;
