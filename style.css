@@ -38,7 +38,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Helvetica, sans-serif;
+    font-family: "Nimbus Sans", sans-serif;
     font-size: var(--font-size-smallscreen);
 }
 
@@ -141,7 +141,7 @@ header {
     height: var(--logobar-height-smallscreen);
     display: flex;
     align-items: center;
-    box-shadow: 0 1px 1px 0 rgba(128, 128, 128, 0.25);
+    box-shadow: 0 0 1px 0 rgba(128, 128, 128, 0.25);
 }
 
 #logobar a {
@@ -267,12 +267,14 @@ header {
     width: 82%;
     align-items: center;
     justify-content: left;
-    column-gap: 25px;
+    column-gap: 27px;
+    height: 34px;
 }
 
 .button-bar a {
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 5px;
 }
 
 .button-bar a:hover {
@@ -284,12 +286,12 @@ header {
 }
 
 #CTA {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: white;
     background-color: var(--tertiary-color);
     border: 1px solid var(--tertiary-color-dark);
     padding: 0 8px; 
-    height: 32px;
+    height: 34px;
     line-height: 5px;
     /* padding-bottom: 1px; */
     font-family: 'Noto Sans', sans-serif;
@@ -1004,7 +1006,7 @@ footer .contact li a:active {
         width: auto;
         left: 400px;
         display: flex;
-        justify-content: right;
+        justify-content: flex-end;
         align-items: center;
         padding-right: 62px;
     }
@@ -1193,7 +1195,7 @@ footer .contact li a:active {
         height: 39px;
         padding: 0 12px;  
         padding-top: 2px;  
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
     }
     #services-button {
         display: none;
